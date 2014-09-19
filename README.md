@@ -1,0 +1,4 @@
+MMRecordCoreDataExample
+=======================
+
+MMRecord with CoreData
