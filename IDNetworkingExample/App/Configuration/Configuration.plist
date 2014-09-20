@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Production 4G</key>
+	<dict>
+		<key>OAUTH_URL</key>
+		<string></string>
+		<key>API_BASE_URL</key>
+		<string></string>
+		<key>API_KEY</key>
+		<string></string>
+		<key>CLIENT_ID</key>
+		<string></string>
+		<key>CLIENT_SECRET</key>
+		<string></string>
+	</dict>
+	<key>Development 4G</key>
+	<dict>
+		<key>OAUTH_URL</key>
+		<string></string>
+		<key>API_BASE_URL</key>
+		<string></string>
+		<key>API_KEY</key>
+		<string></string>
+		<key>CLIENT_ID</key>
+		<string></string>
+		<key>CLIENT_SECRET</key>
+		<string></string>
+	</dict>
+</dict>
+</plist>

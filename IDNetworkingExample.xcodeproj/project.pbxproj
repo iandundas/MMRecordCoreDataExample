@@ -7,13 +7,68 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		19656653F4951959271BD697 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 196563921C7B8F981287AE78 /* ViewController.m */; };
-		1965682045ADA4731CBA1F45 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19656F411CF7EE1E7D57A08C /* Images.xcassets */; };
-		19656A74CF3828D93724521C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19656A28945C2325A753F56B /* LaunchScreen.xib */; };
-		19656BE3E64345112541DDA3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19656E81D884D1C2BBF21C94 /* Main.storyboard */; };
-		19656C2C34F7D7FA6F38781F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 19656D26D7155402490FFF5F /* AppDelegate.m */; };
+		1965618461B8872CE8FCAEE0 /* AuthHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 196562AE45163171A20F392F /* AuthHandler.m */; };
+		196561BE96FD2ABBE3AB5615 /* CoreDataManager+extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 196561EB75AAF2A8C81304F7 /* CoreDataManager+extensions.m */; };
+		19656254F65126C296564C95 /* _IDEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 196563DD85EA45C48F56B732 /* _IDEvent.m */; };
+		1965629B397A6FA9A0E86E62 /* OAuthLoginService.m in Sources */ = {isa = PBXBuildFile; fileRef = 19656E6AD3A11A89604D867A /* OAuthLoginService.m */; };
+		196562BFF09F59A25B818135 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 196564FE1B66E430855541D9 /* LaunchScreen.xib */; };
+		19656304BF8FBB929A048799 /* IDCoreDataWebService.m in Sources */ = {isa = PBXBuildFile; fileRef = 19656A6545AE843A49764F57 /* IDCoreDataWebService.m */; };
+		196563B0BFD04E035914B9FC /* IDBaseWebService.m in Sources */ = {isa = PBXBuildFile; fileRef = 196564A85C8EE3DFD494A098 /* IDBaseWebService.m */; };
+		196564496FC5C7A413D14CC2 /* NSDateFormatter+factory.m in Sources */ = {isa = PBXBuildFile; fileRef = 196569372A56C9773ED04968 /* NSDateFormatter+factory.m */; };
+		196565C49FB8548FF7087FFD /* Configuration.plist in Resources */ = {isa = PBXBuildFile; fileRef = 196567EE6BF87110399F86EF /* Configuration.plist */; };
+		1965664F2572AA4656E03358 /* UIColor+KKL.m in Sources */ = {isa = PBXBuildFile; fileRef = 19656A68179C50DEA814C1E9 /* UIColor+KKL.m */; };
+		196566F5FD651B3C07D7C3F3 /* IDEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 196561537806464758909969 /* IDEventViewController.m */; };
+		196567636855943E9DD673E6 /* OAuthLoginService.m in Sources */ = {isa = PBXBuildFile; fileRef = 19656E6AD3A11A89604D867A /* OAuthLoginService.m */; };
+		196567C16CE7923797C2C16D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 19656450F28F1E718881EB39 /* main.m */; };
+		19656800B1C945BBA342FD60 /* IDBasicCacheValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 196567513575D92718060C0D /* IDBasicCacheValidator.m */; };
+		1965682E5B397BF7D054468C /* OAuthRefreshTokenService.m in Sources */ = {isa = PBXBuildFile; fileRef = 196560162BC8A50425180B7C /* OAuthRefreshTokenService.m */; };
+		196568F5584B3A1C09911FCD /* AuthHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 196562AE45163171A20F392F /* AuthHandler.m */; };
+		1965690A8D84C0995E47BFD4 /* IDArtistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1965682294A5EC9A8ACD59E6 /* IDArtistViewController.m */; };
+		19656919A025DB59F9F26F11 /* _IDArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = 1965635EE8909898B609AC19 /* _IDArtist.m */; };
+		1965691BA423DDF648BCC8BA /* IDSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 19656558DC143546919CAB11 /* IDSearchViewController.m */; };
+		19656966B7F192CE91CB5590 /* GVUserDefaults+defaults.m in Sources */ = {isa = PBXBuildFile; fileRef = 1965614077CDC81DD85AC625 /* GVUserDefaults+defaults.m */; };
+		196569B5C4F425C3798434E3 /* GVUserDefaults+defaults.m in Sources */ = {isa = PBXBuildFile; fileRef = 1965614077CDC81DD85AC625 /* GVUserDefaults+defaults.m */; };
+		196569CE8954E146F5B7250A /* OAuthRefreshTokenService.m in Sources */ = {isa = PBXBuildFile; fileRef = 196560162BC8A50425180B7C /* OAuthRefreshTokenService.m */; };
+		19656A0FFC0DAB28FE1B5648 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 196564FE1B66E430855541D9 /* LaunchScreen.xib */; };
+		19656A9684C0A34FA2D64860 /* IDEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 19656F4C3783D4A72A73A262 /* IDEvent.m */; };
+		19656B7F9D173382270239C5 /* IDConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 19656A3414FC62C19653CEF5 /* IDConfiguration.m */; };
+		19656B9241C5427A8BDBCA22 /* IDRecordResponseSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 19656B35AFCBDDE5A540F942 /* IDRecordResponseSerializer.m */; };
+		19656CADB147BCABAFDA4BA5 /* IDBaseMarshaller.m in Sources */ = {isa = PBXBuildFile; fileRef = 196568DB134C04E7CC00E449 /* IDBaseMarshaller.m */; };
+		19656CC7B2E015873A104C2D /* NSDate+extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 196569F3E05D271005872FDD /* NSDate+extensions.m */; };
+		19656CD5C7A1AC21154B47BB /* IDArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = 19656F4B3E382CA42A9F8EEF /* IDArtist.m */; };
+		19656CFD4261CB25AEA46FB0 /* IDBasicCacheValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 196567513575D92718060C0D /* IDBasicCacheValidator.m */; };
+		19656D075622E538D25A7C5A /* AFMMRecordResponseSerializationMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 19656314DAB7890B1B998993 /* AFMMRecordResponseSerializationMapper.m */; };
 		19656DE6B255FE28482BC747 /* IDNetworkingExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 19656E7D01E94C52B3404CE3 /* IDNetworkingExampleTests.m */; };
-		19656F7A6FABE12E6784F155 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 19656EDF6D754CCAFA517A1B /* main.m */; };
+		19656E0DB6692FC2269DC526 /* AFMMRecordResponseSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 196569F1F591D2D87F8527A3 /* AFMMRecordResponseSerializer.m */; };
+		19656E6A20F229414B7341E6 /* CoreDataManager+extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 196561EB75AAF2A8C81304F7 /* CoreDataManager+extensions.m */; };
+		19656EC1EC5F5ED1BD7C2D58 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1965654EA5EE477C54F5747C /* AppDelegate.m */; };
+		19656FA053501909EECF2A4F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1965697B22CF2E3B185F8D1E /* Images.xcassets */; };
+		19656FD066EF899227529A53 /* IDRecordRepresentation.m in Sources */ = {isa = PBXBuildFile; fileRef = 19656684DEF39A6EFC9A4B91 /* IDRecordRepresentation.m */; };
+		3CCF12C419CD6112000DA5DF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 19656450F28F1E718881EB39 /* main.m */; };
+		3CCF12C519CD6112000DA5DF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1965654EA5EE477C54F5747C /* AppDelegate.m */; };
+		3CCF12C819CD6112000DA5DF /* IDBaseWebService.m in Sources */ = {isa = PBXBuildFile; fileRef = 196564A85C8EE3DFD494A098 /* IDBaseWebService.m */; };
+		3CCF12D619CD6112000DA5DF /* IDCoreDataWebService.m in Sources */ = {isa = PBXBuildFile; fileRef = 19656A6545AE843A49764F57 /* IDCoreDataWebService.m */; };
+		3CCF12D719CD6112000DA5DF /* AFMMRecordResponseSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 196569F1F591D2D87F8527A3 /* AFMMRecordResponseSerializer.m */; };
+		3CCF12D819CD6112000DA5DF /* AFMMRecordResponseSerializationMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 19656314DAB7890B1B998993 /* AFMMRecordResponseSerializationMapper.m */; };
+		3CCF12D919CD6112000DA5DF /* IDRecordRepresentation.m in Sources */ = {isa = PBXBuildFile; fileRef = 19656684DEF39A6EFC9A4B91 /* IDRecordRepresentation.m */; };
+		3CCF12DA19CD6112000DA5DF /* IDRecordResponseSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 19656B35AFCBDDE5A540F942 /* IDRecordResponseSerializer.m */; };
+		3CCF12DB19CD6112000DA5DF /* IDBaseMarshaller.m in Sources */ = {isa = PBXBuildFile; fileRef = 196568DB134C04E7CC00E449 /* IDBaseMarshaller.m */; };
+		3CCF12E619CD6112000DA5DF /* UIColor+KKL.m in Sources */ = {isa = PBXBuildFile; fileRef = 19656A68179C50DEA814C1E9 /* UIColor+KKL.m */; };
+		3CCF12E719CD6112000DA5DF /* NSDate+extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 196569F3E05D271005872FDD /* NSDate+extensions.m */; };
+		3CCF12E819CD6112000DA5DF /* NSDateFormatter+factory.m in Sources */ = {isa = PBXBuildFile; fileRef = 196569372A56C9773ED04968 /* NSDateFormatter+factory.m */; };
+		3CCF12E919CD6112000DA5DF /* IDEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 196561537806464758909969 /* IDEventViewController.m */; };
+		3CCF12EA19CD6112000DA5DF /* IDArtistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1965682294A5EC9A8ACD59E6 /* IDArtistViewController.m */; };
+		3CCF12EB19CD6112000DA5DF /* IDSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 19656558DC143546919CAB11 /* IDSearchViewController.m */; };
+		3CCF12EC19CD6112000DA5DF /* IDEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 19656F4C3783D4A72A73A262 /* IDEvent.m */; };
+		3CCF12ED19CD6112000DA5DF /* IDArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = 19656F4B3E382CA42A9F8EEF /* IDArtist.m */; };
+		3CCF12EE19CD6112000DA5DF /* _IDEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 196563DD85EA45C48F56B732 /* _IDEvent.m */; };
+		3CCF12EF19CD6112000DA5DF /* _IDArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = 1965635EE8909898B609AC19 /* _IDArtist.m */; };
+		3CCF12F119CD6112000DA5DF /* IDConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 19656A3414FC62C19653CEF5 /* IDConfiguration.m */; };
+		3CCF12F319CD6112000DA5DF /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D79D568BDCD4DA99B72061D /* libPods.a */; };
+		3CCF12F619CD6112000DA5DF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1965697B22CF2E3B185F8D1E /* Images.xcassets */; };
+		3CCF12F719CD6112000DA5DF /* Configuration.plist in Resources */ = {isa = PBXBuildFile; fileRef = 196567EE6BF87110399F86EF /* Configuration.plist */; };
+		3CCF130019CD6FBE000DA5DF /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3CCF12FE19CD6FBE000DA5DF /* Model.xcdatamodeld */; };
+		3CCF130119CD6FBE000DA5DF /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3CCF12FE19CD6FBE000DA5DF /* Model.xcdatamodeld */; };
 		9F762D1FDB6B4136BFB5935F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D79D568BDCD4DA99B72061D /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -28,19 +83,69 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1965600D6182E2BCE3FDF9A4 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		1965619868492DBE66195ECB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		196563921C7B8F981287AE78 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		196560162BC8A50425180B7C /* OAuthRefreshTokenService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAuthRefreshTokenService.m; sourceTree = "<group>"; };
+		196560DD6C1739937768001B /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		1965614077CDC81DD85AC625 /* GVUserDefaults+defaults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GVUserDefaults+defaults.m"; sourceTree = "<group>"; };
+		196561537806464758909969 /* IDEventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDEventViewController.m; sourceTree = "<group>"; };
+		1965616C7A67B18BDA432366 /* IDBasicCacheValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDBasicCacheValidator.h; sourceTree = "<group>"; };
+		19656197C8967583D9077C9A /* IDEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDEvent.h; sourceTree = "<group>"; };
+		196561EB75AAF2A8C81304F7 /* CoreDataManager+extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CoreDataManager+extensions.m"; sourceTree = "<group>"; };
+		1965622640F318939A307029 /* AFMMRecordResponseSerializationMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFMMRecordResponseSerializationMapper.h; sourceTree = "<group>"; };
+		196562AE45163171A20F392F /* AuthHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AuthHandler.m; sourceTree = "<group>"; };
+		19656314DAB7890B1B998993 /* AFMMRecordResponseSerializationMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFMMRecordResponseSerializationMapper.m; sourceTree = "<group>"; };
+		1965635EE8909898B609AC19 /* _IDArtist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _IDArtist.m; sourceTree = "<group>"; };
+		19656366DC1BA2E4B0623BDB /* AuthHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthHandler.h; sourceTree = "<group>"; };
+		196563DD85EA45C48F56B732 /* _IDEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _IDEvent.m; sourceTree = "<group>"; };
+		1965644960FC427B6CA61AA1 /* IDBaseWebService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDBaseWebService.h; sourceTree = "<group>"; };
+		19656450F28F1E718881EB39 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		196564A85C8EE3DFD494A098 /* IDBaseWebService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDBaseWebService.m; sourceTree = "<group>"; };
+		1965650A7D6C70D2721362AB /* Release.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Release.plist; sourceTree = "<group>"; };
+		1965654EA5EE477C54F5747C /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		19656558DC143546919CAB11 /* IDSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDSearchViewController.m; sourceTree = "<group>"; };
+		196566068AA13308DD77250B /* IDArtistViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDArtistViewController.h; sourceTree = "<group>"; };
+		19656618942136FCA227D4E5 /* IDCoreDataWebService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDCoreDataWebService.h; sourceTree = "<group>"; };
+		19656640FB9EE5AD95C67ED4 /* IDBaseMarshaller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDBaseMarshaller.h; sourceTree = "<group>"; };
+		19656649202EF1DC7986CE85 /* _IDEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _IDEvent.h; sourceTree = "<group>"; };
+		19656660938D8C0A51604C4F /* Consts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Consts.h; sourceTree = "<group>"; };
+		19656664E014EDA40DB3276F /* OAuthLoginService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuthLoginService.h; sourceTree = "<group>"; };
+		19656684DEF39A6EFC9A4B91 /* IDRecordRepresentation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDRecordRepresentation.m; sourceTree = "<group>"; };
+		196567513575D92718060C0D /* IDBasicCacheValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDBasicCacheValidator.m; sourceTree = "<group>"; };
+		196567A6700402CB74510DC6 /* NSDateFormatter+factory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDateFormatter+factory.h"; sourceTree = "<group>"; };
+		196567EE6BF87110399F86EF /* Configuration.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Configuration.plist; sourceTree = "<group>"; };
+		1965682294A5EC9A8ACD59E6 /* IDArtistViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDArtistViewController.m; sourceTree = "<group>"; };
 		19656861C53FE6A263C43EB6 /* IDNetworkingExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IDNetworkingExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		196568D6CB60BA6FF375FFE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
+		196568DB134C04E7CC00E449 /* IDBaseMarshaller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDBaseMarshaller.m; sourceTree = "<group>"; };
+		196569372A56C9773ED04968 /* NSDateFormatter+factory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDateFormatter+factory.m"; sourceTree = "<group>"; };
+		1965697B22CF2E3B185F8D1E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		196569F1F591D2D87F8527A3 /* AFMMRecordResponseSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFMMRecordResponseSerializer.m; sourceTree = "<group>"; };
+		196569F3E05D271005872FDD /* NSDate+extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+extensions.m"; sourceTree = "<group>"; };
 		196569FFA9FB1A3290B2E188 /* IDNetworkingExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IDNetworkingExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		19656A3414FC62C19653CEF5 /* IDConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDConfiguration.m; sourceTree = "<group>"; };
+		19656A6545AE843A49764F57 /* IDCoreDataWebService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDCoreDataWebService.m; sourceTree = "<group>"; };
+		19656A68179C50DEA814C1E9 /* UIColor+KKL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+KKL.m"; sourceTree = "<group>"; };
 		19656AC1CA7518741ACBBDE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
-		19656C5F6AAF10781A86EAB8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		19656D26D7155402490FFF5F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		19656B35AFCBDDE5A540F942 /* IDRecordResponseSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDRecordResponseSerializer.m; sourceTree = "<group>"; };
+		19656CC1894B41443CDE487F /* UIColor+KKL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+KKL.h"; sourceTree = "<group>"; };
+		19656D33EBE1053EEC67AC68 /* _IDArtist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _IDArtist.h; sourceTree = "<group>"; };
+		19656D65DA14B6E34E478506 /* CoreDataManager+extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CoreDataManager+extensions.h"; sourceTree = "<group>"; };
+		19656D699542F2BF8982ABDB /* IDEventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDEventViewController.h; sourceTree = "<group>"; };
+		19656DB7F34BCE1B14BDC776 /* OAuthRefreshTokenService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuthRefreshTokenService.h; sourceTree = "<group>"; };
+		19656DCE1A8089C7F9003763 /* IDArtist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDArtist.h; sourceTree = "<group>"; };
+		19656DE1B79337EF910F4249 /* GVUserDefaults+defaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GVUserDefaults+defaults.h"; sourceTree = "<group>"; };
+		19656DE62523A166E5A95B45 /* IDConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDConfiguration.h; sourceTree = "<group>"; };
+		19656E4C992FD0159498E732 /* IDRecordResponseSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDRecordResponseSerializer.h; sourceTree = "<group>"; };
+		19656E6AD3A11A89604D867A /* OAuthLoginService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAuthLoginService.m; sourceTree = "<group>"; };
 		19656E7D01E94C52B3404CE3 /* IDNetworkingExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IDNetworkingExampleTests.m; sourceTree = "<group>"; };
-		19656EDF6D754CCAFA517A1B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		19656F411CF7EE1E7D57A08C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		19656F8A5E8A1FB9826C41A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		19656F14A93ED682A82EFACB /* AFMMRecordResponseSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFMMRecordResponseSerializer.h; sourceTree = "<group>"; };
+		19656F305234D8D479D2B151 /* NSDate+extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+extensions.h"; sourceTree = "<group>"; };
+		19656F48DD856906C3E69F01 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = LaunchScreen.xib; sourceTree = "<group>"; };
+		19656F4B3E382CA42A9F8EEF /* IDArtist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDArtist.m; sourceTree = "<group>"; };
+		19656F4C3783D4A72A73A262 /* IDEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDEvent.m; sourceTree = "<group>"; };
+		19656F531265E7A271886B81 /* IDSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDSearchViewController.h; sourceTree = "<group>"; };
+		19656FCD7C0D482EA6AE0939 /* IDRecordRepresentation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDRecordRepresentation.h; sourceTree = "<group>"; };
+		3CCF12FC19CD6112000DA5DF /* IDNetworkingExample DEV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "IDNetworkingExample DEV.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3CCF12FD19CD6112000DA5DF /* Dev.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Dev.plist; sourceTree = "<group>"; };
+		3CCF12FF19CD6FBE000DA5DF /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		3D79D568BDCD4DA99B72061D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E3560CB3E654F8FB8E2AB3E /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -61,16 +166,121 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3CCF12F219CD6112000DA5DF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3CCF12F319CD6112000DA5DF /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		196562C13BA102C418E26423 /* Supporting Files */ = {
+		1965607BDD124FCDB4FC977B /* MMRecord */ = {
 			isa = PBXGroup;
 			children = (
-				196568D6CB60BA6FF375FFE9 /* Info.plist */,
-				19656EDF6D754CCAFA517A1B /* main.m */,
+				196569A5BAFEFF44DA0F0A8C /* AFNetworking extensions */,
+				19656FCD7C0D482EA6AE0939 /* IDRecordRepresentation.h */,
+				19656684DEF39A6EFC9A4B91 /* IDRecordRepresentation.m */,
+				19656E4C992FD0159498E732 /* IDRecordResponseSerializer.h */,
+				19656B35AFCBDDE5A540F942 /* IDRecordResponseSerializer.m */,
 			);
-			name = "Supporting Files";
+			path = MMRecord;
+			sourceTree = "<group>";
+		};
+		1965608E0FFD6AA8C5D85B5F /* Machine */ = {
+			isa = PBXGroup;
+			children = (
+				19656649202EF1DC7986CE85 /* _IDEvent.h */,
+				196563DD85EA45C48F56B732 /* _IDEvent.m */,
+				19656D33EBE1053EEC67AC68 /* _IDArtist.h */,
+				1965635EE8909898B609AC19 /* _IDArtist.m */,
+			);
+			path = Machine;
+			sourceTree = "<group>";
+		};
+		196560D78D38965467AA4741 /* OAuth Refresh Token */ = {
+			isa = PBXGroup;
+			children = (
+				19656DB7F34BCE1B14BDC776 /* OAuthRefreshTokenService.h */,
+				196560162BC8A50425180B7C /* OAuthRefreshTokenService.m */,
+			);
+			path = "OAuth Refresh Token";
+			sourceTree = "<group>";
+		};
+		19656267CE40FCBC4FFC0615 /* careful.. */ = {
+			isa = PBXGroup;
+			children = (
+				1965608E0FFD6AA8C5D85B5F /* Machine */,
+				3CCF12FE19CD6FBE000DA5DF /* Model.xcdatamodeld */,
+			);
+			path = careful..;
+			sourceTree = "<group>";
+		};
+		1965626E4FC56EF371B64626 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				19656618942136FCA227D4E5 /* IDCoreDataWebService.h */,
+				19656A6545AE843A49764F57 /* IDCoreDataWebService.m */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		196562B8C046D2D48520F091 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				19656CC1894B41443CDE487F /* UIColor+KKL.h */,
+				19656A68179C50DEA814C1E9 /* UIColor+KKL.m */,
+				19656F305234D8D479D2B151 /* NSDate+extensions.h */,
+				196569F3E05D271005872FDD /* NSDate+extensions.m */,
+				196567A6700402CB74510DC6 /* NSDateFormatter+factory.h */,
+				196569372A56C9773ED04968 /* NSDateFormatter+factory.m */,
+				19656D65DA14B6E34E478506 /* CoreDataManager+extensions.h */,
+				196561EB75AAF2A8C81304F7 /* CoreDataManager+extensions.m */,
+				19656DE1B79337EF910F4249 /* GVUserDefaults+defaults.h */,
+				1965614077CDC81DD85AC625 /* GVUserDefaults+defaults.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		196562BB9F8CB18EFCCF0563 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				19656366DC1BA2E4B0623BDB /* AuthHandler.h */,
+				196562AE45163171A20F392F /* AuthHandler.m */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		1965630B41AAE589377086CE /* Web Service */ = {
+			isa = PBXGroup;
+			children = (
+				196569BE112B12DA12387186 /* Base */,
+				1965626E4FC56EF371B64626 /* CoreData */,
+			);
+			path = "Web Service";
+			sourceTree = "<group>";
+		};
+		19656633BD06F6A014848E4C /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				196561537806464758909969 /* IDEventViewController.m */,
+				196566068AA13308DD77250B /* IDArtistViewController.h */,
+				1965682294A5EC9A8ACD59E6 /* IDArtistViewController.m */,
+				19656558DC143546919CAB11 /* IDSearchViewController.m */,
+				19656D699542F2BF8982ABDB /* IDEventViewController.h */,
+				19656F531265E7A271886B81 /* IDSearchViewController.h */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		1965663431561F3A61E37838 /* Base.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				196564FE1B66E430855541D9 /* LaunchScreen.xib */,
+			);
+			path = Base.lproj;
 			sourceTree = "<group>";
 		};
 		19656675949E0D36A9D8E5E2 /* IDNetworkingExampleTests */ = {
@@ -85,16 +295,35 @@
 		1965674F574A8D9C968D888F /* IDNetworkingExample */ = {
 			isa = PBXGroup;
 			children = (
-				196562C13BA102C418E26423 /* Supporting Files */,
-				19656F411CF7EE1E7D57A08C /* Images.xcassets */,
-				19656A28945C2325A753F56B /* LaunchScreen.xib */,
-				1965619868492DBE66195ECB /* AppDelegate.h */,
-				19656D26D7155402490FFF5F /* AppDelegate.m */,
-				19656E81D884D1C2BBF21C94 /* Main.storyboard */,
-				1965600D6182E2BCE3FDF9A4 /* ViewController.h */,
-				196563921C7B8F981287AE78 /* ViewController.m */,
+				19656CF4D47C491EE4E4499A /* App */,
+				19656633BD06F6A014848E4C /* Screens */,
+				19656A23E52F28355694F27F /* Network Services */,
+				196562B8C046D2D48520F091 /* Categories */,
+				19656805FD12A68DE26D2DB3 /* Model */,
+				196562BB9F8CB18EFCCF0563 /* Authentication */,
 			);
 			path = IDNetworkingExample;
+			sourceTree = "<group>";
+		};
+		19656805FD12A68DE26D2DB3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				19656DCE1A8089C7F9003763 /* IDArtist.h */,
+				19656F4C3783D4A72A73A262 /* IDEvent.m */,
+				19656F4B3E382CA42A9F8EEF /* IDArtist.m */,
+				19656197C8967583D9077C9A /* IDEvent.h */,
+				19656267CE40FCBC4FFC0615 /* careful.. */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		19656822863F8797382A0995 /* OAuth Login */ = {
+			isa = PBXGroup;
+			children = (
+				19656664E014EDA40DB3276F /* OAuthLoginService.h */,
+				19656E6AD3A11A89604D867A /* OAuthLoginService.m */,
+			);
+			path = "OAuth Login";
 			sourceTree = "<group>";
 		};
 		19656993123668CBC817624D = {
@@ -108,12 +337,97 @@
 			);
 			sourceTree = "<group>";
 		};
+		196569A5BAFEFF44DA0F0A8C /* AFNetworking extensions */ = {
+			isa = PBXGroup;
+			children = (
+				19656F14A93ED682A82EFACB /* AFMMRecordResponseSerializer.h */,
+				196569F1F591D2D87F8527A3 /* AFMMRecordResponseSerializer.m */,
+				1965622640F318939A307029 /* AFMMRecordResponseSerializationMapper.h */,
+				19656314DAB7890B1B998993 /* AFMMRecordResponseSerializationMapper.m */,
+			);
+			path = "AFNetworking extensions";
+			sourceTree = "<group>";
+		};
+		196569BE112B12DA12387186 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				1965644960FC427B6CA61AA1 /* IDBaseWebService.h */,
+				196564A85C8EE3DFD494A098 /* IDBaseWebService.m */,
+				196560D78D38965467AA4741 /* OAuth Refresh Token */,
+				19656822863F8797382A0995 /* OAuth Login */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		19656A23E52F28355694F27F /* Network Services */ = {
+			isa = PBXGroup;
+			children = (
+				1965630B41AAE589377086CE /* Web Service */,
+				1965607BDD124FCDB4FC977B /* MMRecord */,
+				19656CDE2C3E3B84C3EE61B5 /* Marshallers */,
+				196567513575D92718060C0D /* IDBasicCacheValidator.m */,
+				1965616C7A67B18BDA432366 /* IDBasicCacheValidator.h */,
+			);
+			path = "Network Services";
+			sourceTree = "<group>";
+		};
+		19656AB40773643D00039A37 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				19656640FB9EE5AD95C67ED4 /* IDBaseMarshaller.h */,
+				196568DB134C04E7CC00E449 /* IDBaseMarshaller.m */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		19656C6979860950A1920060 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3CCF12FD19CD6112000DA5DF /* Dev.plist */,
+				1965650A7D6C70D2721362AB /* Release.plist */,
+				19656450F28F1E718881EB39 /* main.m */,
+				19656660938D8C0A51604C4F /* Consts.h */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		19656CDE2C3E3B84C3EE61B5 /* Marshallers */ = {
+			isa = PBXGroup;
+			children = (
+				19656AB40773643D00039A37 /* Base */,
+			);
+			path = Marshallers;
+			sourceTree = "<group>";
+		};
+		19656CF4D47C491EE4E4499A /* App */ = {
+			isa = PBXGroup;
+			children = (
+				19656C6979860950A1920060 /* Supporting Files */,
+				1965697B22CF2E3B185F8D1E /* Images.xcassets */,
+				1965654EA5EE477C54F5747C /* AppDelegate.m */,
+				196560DD6C1739937768001B /* AppDelegate.h */,
+				19656D118983C0A9B5AF0F9C /* Configuration */,
+				1965663431561F3A61E37838 /* Base.lproj */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		19656D118983C0A9B5AF0F9C /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				19656DE62523A166E5A95B45 /* IDConfiguration.h */,
+				196567EE6BF87110399F86EF /* Configuration.plist */,
+				19656A3414FC62C19653CEF5 /* IDConfiguration.m */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
 		19656F848290A6A7C26F3CD7 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
 				19656AC1CA7518741ACBBDE9 /* Info.plist */,
 			);
-			name = "Supporting Files";
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		19656FCC2298FC47014A67B6 /* Products */ = {
@@ -121,6 +435,7 @@
 			children = (
 				196569FFA9FB1A3290B2E188 /* IDNetworkingExample.app */,
 				19656861C53FE6A263C43EB6 /* IDNetworkingExampleTests.xctest */,
+				3CCF12FC19CD6112000DA5DF /* IDNetworkingExample DEV.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -173,6 +488,25 @@
 			productReference = 196569FFA9FB1A3290B2E188 /* IDNetworkingExample.app */;
 			productType = "com.apple.product-type.application";
 		};
+		3CCF12C119CD6112000DA5DF /* IDNetworkingExample DEV */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3CCF12F919CD6112000DA5DF /* Build configuration list for PBXNativeTarget "IDNetworkingExample DEV" */;
+			buildPhases = (
+				3CCF12C219CD6112000DA5DF /* Check Pods Manifest.lock */,
+				3CCF12C319CD6112000DA5DF /* Sources */,
+				3CCF12F219CD6112000DA5DF /* Frameworks */,
+				3CCF12F419CD6112000DA5DF /* Resources */,
+				3CCF12F819CD6112000DA5DF /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "IDNetworkingExample DEV";
+			productName = IDNetworkingExample;
+			productReference = 3CCF12FC19CD6112000DA5DF /* IDNetworkingExample DEV.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -194,6 +528,7 @@
 			projectRoot = "";
 			targets = (
 				19656B4AD1F01D5B67F4E8C9 /* IDNetworkingExample */,
+				3CCF12C119CD6112000DA5DF /* IDNetworkingExample DEV */,
 				196569260CE5A20907C19AE3 /* IDNetworkingExampleTests */,
 			);
 		};
@@ -204,9 +539,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1965682045ADA4731CBA1F45 /* Images.xcassets in Resources */,
-				19656A74CF3828D93724521C /* LaunchScreen.xib in Resources */,
-				19656BE3E64345112541DDA3 /* Main.storyboard in Resources */,
+				19656FA053501909EECF2A4F /* Images.xcassets in Resources */,
+				196565C49FB8548FF7087FFD /* Configuration.plist in Resources */,
+				196562BFF09F59A25B818135 /* LaunchScreen.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -217,9 +552,49 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3CCF12F419CD6112000DA5DF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3CCF12F619CD6112000DA5DF /* Images.xcassets in Resources */,
+				3CCF12F719CD6112000DA5DF /* Configuration.plist in Resources */,
+				19656A0FFC0DAB28FE1B5648 /* LaunchScreen.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		3CCF12C219CD6112000DA5DF /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		3CCF12F819CD6112000DA5DF /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		45039AF4435B4C688252C39A /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -257,9 +632,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				19656F7A6FABE12E6784F155 /* main.m in Sources */,
-				19656C2C34F7D7FA6F38781F /* AppDelegate.m in Sources */,
-				19656653F4951959271BD697 /* ViewController.m in Sources */,
+				196567C16CE7923797C2C16D /* main.m in Sources */,
+				19656EC1EC5F5ED1BD7C2D58 /* AppDelegate.m in Sources */,
+				196563B0BFD04E035914B9FC /* IDBaseWebService.m in Sources */,
+				19656304BF8FBB929A048799 /* IDCoreDataWebService.m in Sources */,
+				19656E0DB6692FC2269DC526 /* AFMMRecordResponseSerializer.m in Sources */,
+				3CCF130019CD6FBE000DA5DF /* Model.xcdatamodeld in Sources */,
+				19656D075622E538D25A7C5A /* AFMMRecordResponseSerializationMapper.m in Sources */,
+				19656FD066EF899227529A53 /* IDRecordRepresentation.m in Sources */,
+				19656B9241C5427A8BDBCA22 /* IDRecordResponseSerializer.m in Sources */,
+				19656CADB147BCABAFDA4BA5 /* IDBaseMarshaller.m in Sources */,
+				1965664F2572AA4656E03358 /* UIColor+KKL.m in Sources */,
+				19656CC7B2E015873A104C2D /* NSDate+extensions.m in Sources */,
+				196564496FC5C7A413D14CC2 /* NSDateFormatter+factory.m in Sources */,
+				196566F5FD651B3C07D7C3F3 /* IDEventViewController.m in Sources */,
+				1965690A8D84C0995E47BFD4 /* IDArtistViewController.m in Sources */,
+				1965691BA423DDF648BCC8BA /* IDSearchViewController.m in Sources */,
+				19656A9684C0A34FA2D64860 /* IDEvent.m in Sources */,
+				19656CD5C7A1AC21154B47BB /* IDArtist.m in Sources */,
+				19656254F65126C296564C95 /* _IDEvent.m in Sources */,
+				19656919A025DB59F9F26F11 /* _IDArtist.m in Sources */,
+				19656B7F9D173382270239C5 /* IDConfiguration.m in Sources */,
+				1965618461B8872CE8FCAEE0 /* AuthHandler.m in Sources */,
+				196569CE8954E146F5B7250A /* OAuthRefreshTokenService.m in Sources */,
+				1965629B397A6FA9A0E86E62 /* OAuthLoginService.m in Sources */,
+				19656E6A20F229414B7341E6 /* CoreDataManager+extensions.m in Sources */,
+				196569B5C4F425C3798434E3 /* GVUserDefaults+defaults.m in Sources */,
+				19656800B1C945BBA342FD60 /* IDBasicCacheValidator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,6 +667,40 @@
 			buildActionMask = 2147483647;
 			files = (
 				19656DE6B255FE28482BC747 /* IDNetworkingExampleTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3CCF12C319CD6112000DA5DF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3CCF12C419CD6112000DA5DF /* main.m in Sources */,
+				3CCF12C519CD6112000DA5DF /* AppDelegate.m in Sources */,
+				3CCF12C819CD6112000DA5DF /* IDBaseWebService.m in Sources */,
+				3CCF12D619CD6112000DA5DF /* IDCoreDataWebService.m in Sources */,
+				3CCF12D719CD6112000DA5DF /* AFMMRecordResponseSerializer.m in Sources */,
+				3CCF130119CD6FBE000DA5DF /* Model.xcdatamodeld in Sources */,
+				3CCF12D819CD6112000DA5DF /* AFMMRecordResponseSerializationMapper.m in Sources */,
+				3CCF12D919CD6112000DA5DF /* IDRecordRepresentation.m in Sources */,
+				3CCF12DA19CD6112000DA5DF /* IDRecordResponseSerializer.m in Sources */,
+				3CCF12DB19CD6112000DA5DF /* IDBaseMarshaller.m in Sources */,
+				3CCF12E619CD6112000DA5DF /* UIColor+KKL.m in Sources */,
+				3CCF12E719CD6112000DA5DF /* NSDate+extensions.m in Sources */,
+				3CCF12E819CD6112000DA5DF /* NSDateFormatter+factory.m in Sources */,
+				3CCF12E919CD6112000DA5DF /* IDEventViewController.m in Sources */,
+				3CCF12EA19CD6112000DA5DF /* IDArtistViewController.m in Sources */,
+				3CCF12EB19CD6112000DA5DF /* IDSearchViewController.m in Sources */,
+				3CCF12EC19CD6112000DA5DF /* IDEvent.m in Sources */,
+				3CCF12ED19CD6112000DA5DF /* IDArtist.m in Sources */,
+				3CCF12EE19CD6112000DA5DF /* _IDEvent.m in Sources */,
+				3CCF12EF19CD6112000DA5DF /* _IDArtist.m in Sources */,
+				3CCF12F119CD6112000DA5DF /* IDConfiguration.m in Sources */,
+				196568F5584B3A1C09911FCD /* AuthHandler.m in Sources */,
+				1965682E5B397BF7D054468C /* OAuthRefreshTokenService.m in Sources */,
+				196567636855943E9DD673E6 /* OAuthLoginService.m in Sources */,
+				196561BE96FD2ABBE3AB5615 /* CoreDataManager+extensions.m in Sources */,
+				19656966B7F192CE91CB5590 /* GVUserDefaults+defaults.m in Sources */,
+				19656CFD4261CB25AEA46FB0 /* IDBasicCacheValidator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,20 +715,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		19656A28945C2325A753F56B /* LaunchScreen.xib */ = {
+		196564FE1B66E430855541D9 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				19656C5F6AAF10781A86EAB8 /* Base */,
+				19656F48DD856906C3E69F01 /* Base */,
 			);
 			name = LaunchScreen.xib;
-			sourceTree = "<group>";
-		};
-		19656E81D884D1C2BBF21C94 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				19656F8A5E8A1FB9826C41A5 /* Base */,
-			);
-			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -350,7 +775,7 @@
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = IDNetworkingExampleTests/Info.plist;
+				INFOPLIST_FILE = "IDNetworkingExampleTests/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
@@ -362,7 +787,7 @@
 			baseConfigurationReference = 4E3560CB3E654F8FB8E2AB3E /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = IDNetworkingExample/Info.plist;
+				INFOPLIST_FILE = "IDNetworkingExample/App/Supporting Files/Release.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -411,7 +836,7 @@
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = IDNetworkingExampleTests/Info.plist;
+				INFOPLIST_FILE = "IDNetworkingExampleTests/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
@@ -423,11 +848,35 @@
 			baseConfigurationReference = 4E3560CB3E654F8FB8E2AB3E /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = IDNetworkingExample/Info.plist;
+				INFOPLIST_FILE = "IDNetworkingExample/App/Supporting Files/Release.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
+		};
+		3CCF12FA19CD6112000DA5DF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4E3560CB3E654F8FB8E2AB3E /* Pods.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "IDNetworkingExample/App/Supporting Files/Dev.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "IDNetworkingExample DEV";
+				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Pods\"/**";
+			};
+			name = Debug;
+		};
+		3CCF12FB19CD6112000DA5DF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4E3560CB3E654F8FB8E2AB3E /* Pods.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "IDNetworkingExample/App/Supporting Files/Dev.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "IDNetworkingExample DEV";
+				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Pods\"/**";
+			};
+			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
@@ -459,7 +908,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		3CCF12F919CD6112000DA5DF /* Build configuration list for PBXNativeTarget "IDNetworkingExample DEV" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3CCF12FA19CD6112000DA5DF /* Debug */,
+				3CCF12FB19CD6112000DA5DF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		3CCF12FE19CD6FBE000DA5DF /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				3CCF12FF19CD6FBE000DA5DF /* Model.xcdatamodel */,
+			);
+			currentVersion = 3CCF12FF19CD6FBE000DA5DF /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 19656C8BC7D97A65F8313018 /* Project object */;
 }
