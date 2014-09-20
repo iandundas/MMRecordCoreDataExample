@@ -17,6 +17,11 @@ PODS:
   - AFNetworking/Serialization (2.1.0)
   - AFNetworking/UIKit (2.1.0):
     - AFNetworking/NSURLConnection
+  - CompactConstraint (0.1.0)
+  - CRToast (0.0.7)
+  - DateTools (1.4.2)
+  - FXKeychain (1.5.1)
+  - GVUserDefaults (0.9.5)
   - libextobjc (0.4):
     - libextobjc/EXTADT
     - libextobjc/EXTConcreteProtocol
@@ -52,28 +57,41 @@ PODS:
     - libextobjc/RuntimeExtensions
   - libextobjc/RuntimeExtensions (0.4)
   - libextobjc/UmbrellaHeader (0.4)
-  - MMRecord (1.4.1):
+  - MMRecord (1.3.0):
     - MMRecord/Core
-  - MMRecord/Core (1.4.1)
+  - MMRecord/Core (1.3.0)
   - ObjectiveRecord (1.5.0):
     - ObjectiveSugar
   - ObjectiveSugar (1.1.0)
   - Reachability (3.1.1)
+  - UIView+Positioning (1.0.1)
 
 DEPENDENCIES:
   - AFNetworking (~> 2.1.0)
+  - CompactConstraint (~> 0.1)
+  - CRToast (~> 0.0.7)
+  - DateTools
+  - FXKeychain (~> 1.5)
+  - GVUserDefaults
   - libextobjc (= 0.4)
-  - MMRecord (~> 1.3)
+  - MMRecord (~> 1.3.0)
   - ObjectiveRecord (= 1.5)
   - ObjectiveSugar (~> 1.1.0)
   - Reachability (~> 3.1.1)
+  - UIView+Positioning (~> 1.0)
 
 SPEC CHECKSUMS:
   AFNetworking: 7c33510b46f994bc75b75c6e63c1d83414ca40f2
+  CompactConstraint: 28050cd1f9c63c67412a0f3d7f758cb0218de192
+  CRToast: f9f2c4b29776d68ba24c4d621cba59a83fea921b
+  DateTools: 1d8f720ef48e0f229565509639dc31d48e99851b
+  FXKeychain: beb642a4218ba783507af08865eda05e9b26a612
+  GVUserDefaults: 66c524fc1709b2d95db774f4bb665dfad4671168
   libextobjc: ba42e4111f433273a886cd54f0ddaddb7f62f82f
-  MMRecord: d97ae01093878067aff85dcbd90fb700605cc634
+  MMRecord: b12a3e3c50a45ce97697245e2ee2f30f7a859647
   ObjectiveRecord: 173527cdf923ee956f6b0a4430916534b54583f5
   ObjectiveSugar: f48793f5902c77cfc02a4ce46d2e8ecddcad4dc2
   Reachability: 8e9635e3cb4f98e7f825e51147f677ecc694d0e7
+  UIView+Positioning: 870af80983bf495af2cb8a3a15b20e26fcc57ebb
 
 COCOAPODS: 0.33.1

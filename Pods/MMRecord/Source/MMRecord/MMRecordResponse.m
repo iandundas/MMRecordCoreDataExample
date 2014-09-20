@@ -1,4 +1,4 @@
-// MMRecordResponse.m
+// MMRecordResponseDescription.m
 //
 // Copyright (c) 2013 Mutual Mobile (http://www.mutualmobile.com/)
 //
@@ -41,7 +41,6 @@
 @property (nonatomic, strong) MMRecordRepresentation *representation;
 @property (nonatomic) BOOL hasRelationshipPrimaryKey;
 @property (nonatomic, copy) MMRecordOptionsRecordPrePopulationBlock recordPrePopulationBlock;
-@property (nonatomic, strong) MMRecordDebugger *debugger;
 
 - (instancetype)initWithEntity:(NSEntityDescription *)entity;
 
@@ -67,7 +66,6 @@
 @property (nonatomic, strong) NSManagedObjectContext *context;
 @property (nonatomic, strong) NSEntityDescription *initialEntity;
 @property (nonatomic, copy) NSArray *responseObjectArray;
-@property (nonatomic, strong) MMRecordOptions *options;
 @property (nonatomic, strong) NSMutableArray *objectGraph;  // Array of Protos
 @property (nonatomic, strong) NSMutableDictionary *responseGroups;  // Key = NSEntityDescription, Value = MMRecordResponseGroup
 @end
@@ -79,13 +77,11 @@
 
 + (MMRecordResponse *)responseFromResponseObjectArray:(NSArray *)responseObjectArray
                                         initialEntity:(NSEntityDescription *)initialEntity
-                                              context:(NSManagedObjectContext *)context
-                                              options:(MMRecordOptions *)options {
+                                              context:(NSManagedObjectContext *)context {
     MMRecordResponse *response = [[MMRecordResponse alloc] init];
     response.context = context;
     response.initialEntity = initialEntity;
     response.responseObjectArray = responseObjectArray;
-    response.options = options;
     
     return response;
 }
@@ -131,8 +127,9 @@
 #pragma mark - Logging
 
 - (void)logObjectGraph {
-    [self.options.debugger logMessageWithDescription:[NSString stringWithFormat:@"%@", self.objectGraph]
-                                 minimumLoggingLevel:MMRecordLoggingLevelNone];
+    if ([MMRecord loggingLevel] != MMRecordLoggingLevelNone) {
+        MMRLogInfo(@"%@", self.objectGraph);
+    }
 }
 
 
@@ -146,8 +143,7 @@
     if (responseGroup == nil) {
         if ([NSClassFromString([entity managedObjectClassName]) isSubclassOfClass:[MMRecord class]]) {
             responseGroup = [[MMRecordResponseGroup alloc] initWithEntity:entity];
-            responseGroup.recordPrePopulationBlock = self.options.recordPrePopulationBlock;
-            responseGroup.debugger = self.options.debugger;
+            responseGroup.recordPrePopulationBlock = self.recordPrePopulationBlock;
             responseGroups[entityDescriptionsKey] = responseGroup;
         } else {
             return nil;
@@ -165,25 +161,6 @@
     [responseGroup addProtoRecord:protoRecord];
 }
 
-#pragma mark - Determine Entity subclass to use
-
-- (NSEntityDescription *)subEntityForRecordResponseObject:(id)object
-                                        withInitialEntity:(NSEntityDescription *)initialEntity {
-    NSArray *subEntities = initialEntity.subentities;
-
-    for (NSEntityDescription *subEntity in subEntities) {
-        Class subEntityClass = NSClassFromString([subEntity managedObjectClassName]);
-
-        if ([subEntityClass respondsToSelector:@selector(shouldUseSubEntityRecordClassToRepresentData:)]) {
-            if ([subEntityClass shouldUseSubEntityRecordClassToRepresentData:object]) {
-                return [self subEntityForRecordResponseObject:object
-                                            withInitialEntity:subEntity];
-            }
-        }
-    }
-    
-    return initialEntity;
-}
 
 #pragma mark - Building Proto Records
 
@@ -191,10 +168,21 @@
     NSMutableDictionary *responseGroups = [NSMutableDictionary dictionary];
     NSMutableArray *objectGraph = [NSMutableArray array];
     
-
+    NSArray *subEntities = self.initialEntity.subentities;
+    
     for (id recordResponseObject in self.responseObjectArray) {
-        NSEntityDescription *entity = [self subEntityForRecordResponseObject:recordResponseObject
-                                                           withInitialEntity:self.initialEntity];
+        NSEntityDescription *entity = self.initialEntity;
+        
+        for (NSEntityDescription *subEntity in subEntities) {
+            Class subEntityClass = NSClassFromString([subEntity managedObjectClassName]);
+            
+            if ([subEntityClass respondsToSelector:@selector(shouldUseSubEntityRecordClassToRepresentData:)]) {
+                if ([subEntityClass shouldUseSubEntityRecordClassToRepresentData:recordResponseObject]) {
+                    entity = subEntity;
+                    break;
+                }
+            }
+        }
         
         MMRecordProtoRecord *proto = [self protoRecordWithRecordResponseObject:recordResponseObject
                                                                         entity:entity
@@ -230,31 +218,15 @@
                                                         entity:entity
                                                 representation:representation];
         
-        
         if (proto.hasRelationshipPrimarykey == NO) {
             if (proto.primaryKeyValue == nil) {
-                if (self.options.entityPrimaryKeyInjectionBlock != nil) {
-                    proto.primaryKeyValue = self.options.entityPrimaryKeyInjectionBlock(proto.entity,
-                                                                                        proto.dictionary,
-                                                                                        parentProtoRecord);
+                if (self.entityPrimaryKeyInjectionBlock != nil) {
+                    proto.primaryKeyValue = self.entityPrimaryKeyInjectionBlock(proto.entity,
+                                                                                proto.dictionary,
+                                                                                parentProtoRecord);
                 }
             }
-            
-            if (proto.primaryKeyValue == nil) {
-                MMRecordDebugger *debugger = self.options.debugger;
-                NSString *errorDescription = [NSString stringWithFormat:@"Creating proto record with no primary key value. \"%@\"", proto];
-                NSDictionary *parameters = [debugger parametersWithKeys:@[MMRecordDebuggerParameterRecordClassName,
-                                                                          MMRecordDebuggerParameterErrorDescription,
-                                                                          MMRecordDebuggerParameterEntityDescription]
-                                                                 values:@[proto.entity.managedObjectClassName,
-                                                                          errorDescription,
-                                                                          proto.entity]];
-                [debugger handleErrorCode:MMRecordErrorCodeMissingRecordPrimaryKey withParameters:parameters];
-            }
         }
-    } else {
-        [representation.marshalerClass mergeDuplicateRecordResponseObjectDictionary:recordResponseObject
-                                                            withExistingProtoRecord:proto];
     }
     
     [self uniquelyAddNewProtoRecord:proto toExistingResponseGroups:responseGroups];
@@ -304,19 +276,12 @@
             }
             
             for (id object in relationshipObject) {
-                NSEntityDescription *recordSubEntity = [self subEntityForRecordResponseObject:object
-                                                                            withInitialEntity:entity];
-                
-                MMRecordProtoRecord *relationshipProto = [self protoRecordWithRecordResponseObject:object
-                                                                                            entity:recordSubEntity
-                                                                            existingResponseGroups:responseGroups
-                                                                                 parentProtoRecord:protoRecord];
-                
-                // By keeping the above section of code outside the conditional we can gaurantee that
-                // the protoRecord generation/parsing method above gets called for every relationship
-                // proto, which also causes the optional merge code to be run for all possible updated
-                // relationship protos.
                 if ([protoRecord canAccomodateAdditionalProtoRecordForRelationshipDescription:relationshipDescription]) {
+                    MMRecordProtoRecord *relationshipProto = [self protoRecordWithRecordResponseObject:object
+                                                                                                entity:entity
+                                                                                existingResponseGroups:responseGroups
+                                                                                     parentProtoRecord:protoRecord];
+                    
                     [protoRecord addRelationshipProto:relationshipProto
                            forRelationshipDescription:relationshipDescription];
                 }
@@ -464,13 +429,7 @@
         if (record.primaryKeyValue != nil) {
             [existingRecordDictionary setObject:record forKey:record.primaryKeyValue];
         } else {
-            MMRecordDebugger *debugger = self.debugger;
-            NSString *errorDescription = [NSString stringWithFormat:@"Fetched record with no primary key value \"%@\"", record];
-            NSDictionary *parameters = [debugger parametersWithKeys:@[MMRecordDebuggerParameterRecordClassName,
-                                                                      MMRecordDebuggerParameterErrorDescription]
-                                                             values:@[record.class,
-                                                                      errorDescription]];
-            [debugger handleErrorCode:MMRecordErrorCodeMissingRecordPrimaryKey withParameters:parameters];
+            MMRLogVerbose(@"Fetched record with no primary key value \"%@\"", record);
         }
     }
     
@@ -541,11 +500,17 @@
             MMRecord *record = [[recordClass alloc] initWithEntity:self.entity insertIntoManagedObjectContext:context];
             protoRecord.record = record;
             
-            NSString *message = [NSString stringWithFormat:@"Created proto record \"%@\", value: \"%@\"", protoRecord.entity.name, protoRecord.primaryKeyValue];
-            [self.debugger logMessageWithDescription:message minimumLoggingLevel:MMRecordLoggingLevelDebug];
+            if ([MMRecord loggingLevel] == MMRecordLoggingLevelDebug) {
+                MMRLogVerbose(@"Created proto record \"%@\", value: \"%@\"", protoRecord.entity.name, protoRecord.primaryKeyValue);
+            }
         }
     }
 }
 
+
 @end
 
+#undef MMRLogInfo
+#undef MMRLogWarn
+#undef MMRLogError
+#undef MMRLogVerbose

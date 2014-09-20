@@ -48,17 +48,47 @@
 #define COCOAPODS_VERSION_MINOR_AFNetworking_UIKit 1
 #define COCOAPODS_VERSION_PATCH_AFNetworking_UIKit 0
 
+// CRToast
+#define COCOAPODS_POD_AVAILABLE_CRToast
+#define COCOAPODS_VERSION_MAJOR_CRToast 0
+#define COCOAPODS_VERSION_MINOR_CRToast 0
+#define COCOAPODS_VERSION_PATCH_CRToast 7
+
+// CompactConstraint
+#define COCOAPODS_POD_AVAILABLE_CompactConstraint
+#define COCOAPODS_VERSION_MAJOR_CompactConstraint 0
+#define COCOAPODS_VERSION_MINOR_CompactConstraint 1
+#define COCOAPODS_VERSION_PATCH_CompactConstraint 0
+
+// DateTools
+#define COCOAPODS_POD_AVAILABLE_DateTools
+#define COCOAPODS_VERSION_MAJOR_DateTools 1
+#define COCOAPODS_VERSION_MINOR_DateTools 4
+#define COCOAPODS_VERSION_PATCH_DateTools 2
+
+// FXKeychain
+#define COCOAPODS_POD_AVAILABLE_FXKeychain
+#define COCOAPODS_VERSION_MAJOR_FXKeychain 1
+#define COCOAPODS_VERSION_MINOR_FXKeychain 5
+#define COCOAPODS_VERSION_PATCH_FXKeychain 1
+
+// GVUserDefaults
+#define COCOAPODS_POD_AVAILABLE_GVUserDefaults
+#define COCOAPODS_VERSION_MAJOR_GVUserDefaults 0
+#define COCOAPODS_VERSION_MINOR_GVUserDefaults 9
+#define COCOAPODS_VERSION_PATCH_GVUserDefaults 5
+
 // MMRecord
 #define COCOAPODS_POD_AVAILABLE_MMRecord
 #define COCOAPODS_VERSION_MAJOR_MMRecord 1
-#define COCOAPODS_VERSION_MINOR_MMRecord 4
-#define COCOAPODS_VERSION_PATCH_MMRecord 1
+#define COCOAPODS_VERSION_MINOR_MMRecord 3
+#define COCOAPODS_VERSION_PATCH_MMRecord 0
 
 // MMRecord/Core
 #define COCOAPODS_POD_AVAILABLE_MMRecord_Core
 #define COCOAPODS_VERSION_MAJOR_MMRecord_Core 1
-#define COCOAPODS_VERSION_MINOR_MMRecord_Core 4
-#define COCOAPODS_VERSION_PATCH_MMRecord_Core 1
+#define COCOAPODS_VERSION_MINOR_MMRecord_Core 3
+#define COCOAPODS_VERSION_PATCH_MMRecord_Core 0
 
 // ObjectiveRecord
 #define COCOAPODS_POD_AVAILABLE_ObjectiveRecord
@@ -77,6 +107,12 @@
 #define COCOAPODS_VERSION_MAJOR_Reachability 3
 #define COCOAPODS_VERSION_MINOR_Reachability 1
 #define COCOAPODS_VERSION_PATCH_Reachability 1
+
+// UIView+Positioning
+#define COCOAPODS_POD_AVAILABLE_UIView_Positioning
+#define COCOAPODS_VERSION_MAJOR_UIView_Positioning 1
+#define COCOAPODS_VERSION_MINOR_UIView_Positioning 0
+#define COCOAPODS_VERSION_PATCH_UIView_Positioning 1
 
 // libextobjc
 #define COCOAPODS_POD_AVAILABLE_libextobjc
