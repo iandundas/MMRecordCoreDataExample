@@ -1,3 +1,5 @@
+**NB still under active development, may not compile or make sense yet*
+
 MMRecord With CoreData: example project
 =======================================
 
