@@ -19,7 +19,7 @@ So far it demonstrates how to pull from a JSON API, catch network and JSON-level
 
 #Inspirations & Resources
 
-- [Nice Web Services](commandshift.co.uk/blog/2014/01/02/nice-web-services/) blog post by Rich Turton 
+- [Nice Web Services](http://www.commandshift.co.uk/blog/2014/01/02/nice-web-services/) blog post by Rich Turton 
 
 # TODO:
 - extend with MVVM layout using KVO.
